@@ -2,7 +2,7 @@
   "name": "node-ts",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com-personal:manishsharma0398/rizal-mart-node.git",
+  "repository": "https://github.com/manishsharma0398/node-ts-template.git",
   "author": "Manish Sharma <manish.sharma0398@gmail.com>",
   "license": "MIT",
   "scripts": {
