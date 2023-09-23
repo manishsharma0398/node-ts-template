@@ -1,0 +1,42 @@
+{
+  "name": "node-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com-personal:manishsharma0398/rizal-mart-node.git",
+  "author": "Manish Sharma <manish.sharma0398@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf ./dist && npx tsc",
+    "prestart": "npm run build",
+    "start": "node dist",
+    "dev": "nodemon",
+    "prepare": "husky install",
+    "pretify": "prettier --write --ignore-unknown",
+    "lint": "eslint --ext .js,.ts . --color"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "yarn lint",
+      "yarn pretify"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.3",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^39.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "*"
+  }
+}
