@@ -15,6 +15,10 @@
     "pretify": "prettier --write --ignore-unknown",
     "lint": "eslint --ext .js,.ts . --color"
   },
+  "validate-branch-name": {
+    "pattern": "^(feat|fix|chore)/[a-zA-Z0-9](?!.*--)[a-zA-Z0-9-]{3,}[a-zA-Z0-9]$",
+    "errorMsg": "Please follow standard branch name, rename branch using: git branch -m <oldname> <newname>"
+  },
   "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
@@ -47,7 +51,8 @@
     "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "*"
+    "typescript": "*",
+    "validate-branch-name": "^1.3.0"
   },
   "config": {
     "commitizen": {
